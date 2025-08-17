@@ -29,7 +29,7 @@ class PyTest(TestCommand):
 
 setup(
     name='django-choice-enumfields',
-    version='1.1.3',
+    version='1.2.0',
     author='HZDG, Lubos Matl',
     author_email='matllubos@gmail.com',
     description='Real Python Enums for Django.',
@@ -40,9 +40,19 @@ setup(
     zip_safe=False,
     classifiers=[
         'Environment :: Web Environment',
+        'Development Status :: 4 - Beta',
         'Framework :: Django',
+        'Framework :: Django :: 2.2',
+        'Framework :: Django :: 3.0',
         'Framework :: Django :: 3.1',
         'Framework :: Django :: 3.2',
+        'Framework :: Django :: 4.0',
+        'Framework :: Django :: 4.1',
+        'Framework :: Django :: 4.2',
+        'Framework :: Django :: 5.0',
+        'Framework :: Django :: 5.1',
+        'Framework :: Django :: 5.2',
+        'Programming Language :: Python :: 3.13',
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
@@ -51,6 +61,7 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Topic :: Internet :: WWW/HTTP',
     ],
+
     tests_require=[
         'pytest-django',
         'Django',
@@ -58,4 +69,9 @@ setup(
         'pytz',
     ],
     cmdclass={'test': PyTest},
+
+    install_requires=[
+        'django>=2.2,<6.0',
+    ],
+
 )
